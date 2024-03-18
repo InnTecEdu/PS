@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes Individuales saber</title>
+    <link rel="stylesheet" href="./css/reporte.css">
+</head>
+<body>
+    <form action="">
+        <h2>Datos estudiante</h2>
+        <input type="text" id="nombre_estudiante" name="nombre" placeholder="nombre estudiante" required>
+        <input type="text" id="nombre_colegio" name="colegio" placeholder="nombre colegio" required>
+        <input type="text" id="ciudad" name="ciudad" placeholder="ciudad" required>
+        <input type="text" id="curso" name="curso" placeholder="Curso" required>
+        <input type="text" id="jornada" name="jornada" placeholder="Jornada" required>
+
+
+        <h3>notas estudiante</h3>
+        <input type="number" placeholder="matematicas" id="matematicasNota" name="matematicas" min="0" max="10" maxlength="3" step="0.01" required>
+        <input type="number" placeholder="lectura critica" id="lecturaNota" name="lenguaje" min="0" max="10" min="0" max="10" maxlength="3" step="0.01" required>
+        <input type="number" placeholder="sociales y ciudadanas" id="socialesNota" name="sociales" min="0" max="10" maxlength="3" step="0.01" required>
+        <input type="number" placeholder="ciencias naturales" id="cienciasNota" name="naturales" min="0" max="10" maxlength="3" step="0.01" required>
+        <input type="number" placeholder="ingles" id="inglesNota" name="ingles" min="0" max="10" maxlength="3" step="0.01" required>
+        <input type="number" placeholder="n° respuestas acertadas" id="res_acertadas" name="acertadas" min="0" max="10" maxlength="3" step="0.01" required>
+
+        <button type="button" id="btnComprobar" name="decil">mostrar decil</button>
+        <button type="button" id="btnImprimir" name="imprimir" onclick="window.print()">imprimir</button>
+    </form>
+    <section class="reporte">
+        <div class="reporte_cabecera">
+            <img src="./img/logo-saber-pisa.png" alt="">
+            <img src="./img/logo_educar.png" alt="" id="educar_logo">
+            <h2>REPORTE <br> DE RESULTADOS</h2>
+        </div>
+        <div class="reporte_datos-estudiante">
+            <span>
+                <h3>nombres y apellidos</h3>
+                <p class="campo_estudiante"></p>
+            </span>
+            <span>
+                <h3>fecha de generacion</h3>
+                <p class="fecha_generacion"></p>
+            </span>
+            <span>
+                <h3>establecimiento educativo</h3>
+                <p class="campo_colegio"></p>
+            </span>
+            <span>
+                <h3>ciudad</h3>
+                <p class="campo_ciudad"></p>
+            </span>
+            <span>
+                <h3>curso</h3>
+                <p class="campo_curso"></p>
+            </span>
+            <span>
+                <h3>jornada</h3>
+                <p class="campo_jornada"></p>
+            </span>
+        </div>
+        <div class="reporte_puntajes-estudiante">
+            <div class="puntaje_global">
+                <h3>Puntaje global</h3>
+                <p>De 500 puntos posibles, su puntaje global es:</p>
+                <span class="puntaje_total">500</span>
+            </div>
+            <div class="puntaje_decil">
+                <h3>¿EN QUÉ DECIL SE ENCUENTRA?</h3>
+                <p>Este resultado estará disponible una vez
+                    <br>finalice el periodo</p>
+                <span class="puntaje_total">0</span>
+            </div>
+        </div>
+        <div class="aclaracion">
+            <p>* El puntaje global es calculado de manera parcial hasta finalizar todas las pruebas.</p>
+        </div>
+        <div class="reporte_notas-estudiante">
+            <p>pruebas</p>
+            <p>puntaje</p>
+            <p>¿en que decil se encuentra?</p>
+            <div class="tabla_notas-estudiante">
+                <div class="tabla_notas-cabecera">
+                    <p>prueba</p>
+                    <p>su nivel de desempeño es</p>
+                </div>
+                <div class="prueba">
+                    <h3 style="color: white;">matemáticas</h3>
+                    <p class="nota-prueba" style="color: white;">1</p>
+                    <div class="puntaje">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
+                </div>
+                <div class="prueba prueba1">
+                    <h3>matemáticas</h3>
+                    <p class="nota-prueba"></p>
+                    <div class="grafico-nota">
+                        <span> </span>
+                    </div>
+                </div>
+                <div class="prueba prueba2">
+                    <h3>lectura crítica</h3>
+                    <p class="nota-prueba"></p>
+                    <div class="grafico-nota">
+                        <span> </span>
+                    </div>
+                </div>
+                <div class="prueba prueba3">
+                    <h3>sociales y ciudadanas</h3>
+                    <p class="nota-prueba"></p>
+                    <div class="grafico-nota">
+                        <span> </span>
+                    </div>
+                </div>
+                <div class="prueba prueba4">
+                    <h3>ciencias naturales</h3>
+                    <p class="nota-prueba"></p>
+                    <div class="grafico-nota">
+                        <span> </span>
+                    </div>
+                </div>
+                <div class="prueba prueba5">
+                    <h3>inglés</h3>
+                    <p class="nota-prueba"></p>
+                    <div class="grafico-nota">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="competencias_estudiante">
+            <div class="tabla_notas-estudiante">
+                <div class="tabla_notas-cabecera">
+                    <p style="margin-left:30px">Niveles de Desempeño</p>
+                    <p>Descriptor general</p>
+                    <p>Descriptores específicos</p>
+                </div>
+                <div class="prueba prueba1">
+                    <div class="texto_nivel"></div>
+                    <div class="texto_resultado"></div>
+                    <div class="texto_especifico"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="rangos">
+        <div class="reporte_">
+            <p style="color: #00d07d;">Rangos evaluativos:</p>
+            <p>Matemáticas	     >= 0  <= 3.5 | >= 3.6 <= 5.0 | >= 5.1  <= 7.0 | >= 7.1  <= 10</p>
+            <p>Lectura Crítica	 >= 0  <= 3.5 | >= 3.6 <= 5.0 | >= 5.1  <= 7.0 | >= 7.1  <= 10</p>
+        </div>
+        <div class="reporte_">
+            <p>Ciencias Sociales >= 0  <= 4,0 | >= 4,1 <= 5.5 | >= 5.6  <= 7.0 | >= 7.1  <= 10</p>
+            <p>Ciencias Naturales>= 0  <= 4,0 |	>= 4,1 <= 5.5 |	>= 5.6  <= 7.0 | >= 7.1  <= 10</p>
+            <p>Inglés	         >= 0  <= 4,7 |	>= 4,8 <= 5.7 |	>= 5.8  <= 6,7 | >= 6,8  <= 7,8 | >= 7,9 <= 10</p>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
