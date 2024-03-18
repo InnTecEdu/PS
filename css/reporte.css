@@ -1,3 +1,4 @@
+
 @import url("./font-face.css");
 @import url("./form.css");
 
@@ -256,4 +257,25 @@
     border-bottom: 1px solid black;
     width: 100%;
     padding: 2px;
+}
+/* Cuando el dispositivo de salida sea una impresora */
+@media print {
+form
+    /* Utilizar una regla parecida a ésta: */
+    .ocultar-al-imprimir {
+      display: none;
+    }
+  }
+@media print {
+
+  /* Se aplicará la siguiente regla CSS */
+ form,
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  [type="input"] 
+    {
+    display: none;
+  }
+
 }
